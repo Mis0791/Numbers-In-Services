@@ -1,18 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
+import { AlphaComponent } from './alpha/alpha.component';
+import { BetaComponent } from './beta/beta.component';
+import { BComponent } from './b/b.component';
+
+import { DataService } from './data.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlphaComponent,
+    BetaComponent,
+    BComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
